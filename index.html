@@ -16,9 +16,9 @@
       --border:  #242525;
       --white:   #ffffff;
       --muted:   #7a7d7d;
-      --teal:    #00c9a7;
-      --teal2:   #00e5bf;
-      --tealfade:rgba(0,201,167,0.12);
+      --red:     #e8001a;
+      --red2:    #ff2a40;
+      --redfade: rgba(232,0,26,0.12);
       --wa:      #25d366;
       --radius:  18px;
     }
@@ -50,24 +50,25 @@
     }
 
     .nav-logo {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--white);
       text-decoration: none;
       display: flex;
-      align-items: baseline;
-      gap: 5px;
+      align-items: center;
+      gap: 12px;
     }
-    .nav-logo-gg {
-      font-size: 24px;
-      font-weight: 900;
-      color: var(--teal);
-      letter-spacing: -0.02em;
-      font-style: italic;
+    .nav-logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    .nav-logo-text { color: rgba(255,255,255,0.55); font-weight: 600; }
+    .nav-logo-text {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    .nav-logo-text span { color: var(--red); }
 
     .nav-links {
       display: flex;
@@ -147,43 +148,42 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--red);
       margin-bottom: 28px;
       padding: 7px 20px;
-      border: 1px solid rgba(0,201,167,0.35);
+      border: 1px solid rgba(232,0,26,0.35);
       border-radius: 50px;
-      background: rgba(0,201,167,0.07);
+      background: rgba(232,0,26,0.07);
     }
     .hero-badge::before {
       content: '';
       width: 6px; height: 6px;
-      background: var(--teal);
+      background: var(--red);
       border-radius: 50%;
     }
 
-    .hero-title {
-      font-size: clamp(64px, 10vw, 116px);
-      font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -0.05em;
-      margin-bottom: 10px;
+    .hero-logo {
+      width: clamp(140px, 22vw, 220px);
+      height: auto;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 60px rgba(232,0,26,0.5));
     }
 
-    .hero-title-gg {
-      display: block;
-      font-style: italic;
-      color: var(--teal);
-      text-shadow: 0 0 90px rgba(0,201,167,0.45);
+    .hero-title {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
     }
 
     .hero-title-motos {
       display: block;
       color: rgba(255,255,255,0.65);
-      font-size: clamp(20px, 3vw, 40px);
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      margin-top: 16px;
     }
 
     /* Círculo giratorio igual que la tarjeta */
@@ -208,7 +208,7 @@
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--red);
       line-height: 1.35;
       text-align: center;
     }
@@ -252,7 +252,7 @@
       backdrop-filter: blur(10px);
       transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
-    .btn-secondary:hover { border-color: var(--teal); color: var(--teal); background: var(--tealfade); }
+    .btn-secondary:hover { border-color: var(--red); color: var(--red); background: var(--redfade); }
 
     .hero-scroll {
       position: absolute;
@@ -298,12 +298,12 @@
 
     .service-icon {
       width: 46px; height: 46px;
-      background: var(--tealfade);
+      background: var(--redfade);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .service-icon svg { width: 22px; height: 22px; stroke: var(--teal); fill: none; stroke-width: 1.6; }
+    .service-icon svg { width: 22px; height: 22px; stroke: var(--red); fill: none; stroke-width: 1.6; }
 
     .service-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
     .service-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
@@ -317,7 +317,7 @@
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--red);
       margin-bottom: 16px;
     }
 
@@ -368,7 +368,7 @@
     }
     .moto-card:hover {
       transform: translateY(-8px);
-      border-color: rgba(0,201,167,0.3);
+      border-color: rgba(232,0,26,0.3);
       box-shadow: 0 32px 80px rgba(0,0,0,0.6);
     }
 
@@ -397,8 +397,8 @@
       text-transform: uppercase;
       padding: 5px 12px;
       border-radius: 50px;
-      background: var(--teal);
-      color: #060808;
+      background: var(--red);
+      color: #ffffff;
     }
     .moto-badge-glass {
       background: rgba(20,20,20,0.75);
@@ -410,7 +410,7 @@
     .moto-cat {
       font-size: 10px; font-weight: 700;
       letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 7px;
+      color: var(--red); margin-bottom: 7px;
     }
     .moto-name { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 5px; }
     .moto-year { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
@@ -470,7 +470,7 @@
     .repair-img-glow {
       position: absolute; bottom: 0; left: 0; right: 0;
       height: 55%;
-      background: linear-gradient(to top, rgba(0,201,167,0.14), transparent);
+      background: linear-gradient(to top, rgba(232,0,26,0.14), transparent);
       pointer-events: none;
     }
 
@@ -483,13 +483,13 @@
       border-radius: 14px;
       transition: border-color 0.25s;
     }
-    .repair-item:hover { border-color: rgba(0,201,167,0.3); }
+    .repair-item:hover { border-color: rgba(232,0,26,0.3); }
     .repair-item-icon {
       width: 38px; height: 38px;
-      background: var(--tealfade); border-radius: 10px;
+      background: var(--redfade); border-radius: 10px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .repair-item-icon svg { width: 18px; height: 18px; stroke: var(--teal); fill: none; stroke-width: 1.6; }
+    .repair-item-icon svg { width: 18px; height: 18px; stroke: var(--red); fill: none; stroke-width: 1.6; }
     .repair-item-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
     .repair-item-desc  { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
@@ -515,7 +515,7 @@
     }
     .part-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(0,201,167,0.28);
+      border-color: rgba(232,0,26,0.28);
       box-shadow: 0 24px 60px rgba(0,0,0,0.5);
     }
 
@@ -565,13 +565,13 @@
     .cta-glow {
       position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
       width: 700px; height: 260px;
-      background: radial-gradient(ellipse, rgba(0,201,167,0.1) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(232,0,26,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .cta-logo {
       font-size: 48px; font-weight: 900; font-style: italic;
-      color: var(--teal); letter-spacing: -0.04em; margin-bottom: 8px;
+      color: var(--red); letter-spacing: -0.04em; margin-bottom: 8px;
     }
     .cta-inner .section-title { max-width: 560px; margin: 0 auto 18px; font-size: clamp(26px,3.5vw,44px); }
     .cta-inner .section-subtitle { margin: 0 auto 40px; text-align: center; max-width: 420px; }
@@ -619,7 +619,7 @@
       display: flex; align-items: baseline; gap: 5px;
       text-decoration: none; margin-bottom: 14px;
     }
-    .footer-gg { font-size: 30px; font-weight: 900; font-style: italic; color: var(--teal); letter-spacing: -0.04em; }
+    .footer-gg { font-size: 30px; font-weight: 900; font-style: italic; color: var(--red); letter-spacing: -0.04em; }
     .footer-motos { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
 
     .footer-tagline { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 260px; }
@@ -627,14 +627,14 @@
       display: inline-flex; align-items: center; gap: 8px;
       margin-top: 18px;
       font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--teal);
+      color: var(--red);
     }
-    .footer-pill::before { content: ''; width: 6px; height: 6px; background: var(--teal); border-radius: 50%; }
+    .footer-pill::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; }
 
     .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal); }
+    .footer-links a:hover { color: var(--red); }
 
     .footer-bottom {
       display: flex; align-items: center; justify-content: space-between;
@@ -651,9 +651,9 @@
       text-decoration: none;
       transition: border-color 0.2s, background 0.2s;
     }
-    .social-btn:hover { border-color: var(--teal); background: var(--tealfade); }
+    .social-btn:hover { border-color: var(--red); background: var(--redfade); }
     .social-btn svg { width: 15px; height: 15px; stroke: var(--muted); fill: none; stroke-width: 1.6; }
-    .social-btn:hover svg { stroke: var(--teal); }
+    .social-btn:hover svg { stroke: var(--red); }
 
     /* ── REVEAL ── */
     .reveal {
@@ -690,8 +690,8 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
-    <span class="nav-logo-gg">GG</span>
-    <span class="nav-logo-text">MOTORCYCLES</span>
+    <img class="nav-logo-img" src="logo.png" alt="GG Motorcycles logo" />
+    <span class="nav-logo-text"><span>GG</span> MOTORCYCLES</span>
   </a>
   <ul class="nav-links">
     <li><a href="#motos">Motos</a></li>
@@ -714,18 +714,19 @@
   <div class="hero-content">
     <div class="hero-badge reveal">Todas las marcas · Reparación & Compraventa</div>
 
-    <h1 class="hero-title reveal reveal-delay-1">
-      <span class="hero-title-gg">GG</span>
+    <img src="logo.png" alt="GG Motorcycles" class="hero-logo reveal reveal-delay-1" />
+
+    <h1 class="hero-title reveal reveal-delay-2">
       <span class="hero-title-motos">Motorcycles</span>
     </h1>
 
-    <div class="hero-circle reveal reveal-delay-2">
+    <div class="hero-circle reveal reveal-delay-3">
       <svg viewBox="0 0 164 164">
         <defs>
           <path id="ct" d="M 82,82 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"/>
         </defs>
         <text font-size="10.2" font-family="Inter,sans-serif" font-weight="700" letter-spacing="2.2"
-              fill="rgba(0,201,167,0.8)" text-anchor="start">
+              fill="rgba(232,0,26,0.8)" text-anchor="start">
           <textPath href="#ct" startOffset="0">
             • REPARACIÓN Y PUESTA A PUNTO DE MOTOCICLETAS •
           </textPath>
@@ -1111,7 +1112,7 @@
 <section id="contacto">
   <div class="cta-inner reveal">
     <div class="cta-glow"></div>
-    <div class="cta-logo">GG</div>
+    <img src="logo.png" alt="GG Motorcycles" style="width:80px;height:80px;object-fit:cover;border-radius:14px;margin-bottom:16px;filter:drop-shadow(0 0 30px rgba(232,0,26,0.4))" />
     <h2 class="section-title">¿Necesitas algo?</h2>
     <p class="section-subtitle">Sin formularios, sin esperas. Escríbeme por WhatsApp y te respondo en el día.</p>
     <a class="wa-big" href="https://wa.me/34603216199">
@@ -1128,8 +1129,8 @@
     <div class="footer-top">
       <div>
         <a class="footer-brand" href="#">
-          <span class="footer-gg">GG</span>
-          <span class="footer-motos">Motorcycles</span>
+          <img src="logo.png" alt="GG Motorcycles" style="height:44px;width:44px;object-fit:cover;border-radius:8px;margin-right:10px;" />
+          <span class="footer-motos" style="font-size:14px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);">GG <span style="color:var(--red)">Motorcycles</span></span>
         </a>
         <p class="footer-tagline">Reparación y puesta a punto de motocicletas. Compraventa y piezas. Todas las marcas. Trato directo.</p>
         <div class="footer-pill">Todas las marcas · Trato personal</div>
@@ -1190,7 +1191,7 @@
   Particle.prototype.draw = function() {
     ctx.beginPath();
     const g = ctx.createLinearGradient(this.x - this.len, this.y, this.x, this.y);
-    const c = this.teal ? '0,201,167' : '255,255,255';
+    const c = this.teal ? '232,0,26' : '255,255,255';
     g.addColorStop(0, `rgba(${c},0)`);
     g.addColorStop(1, `rgba(${c},${this.alpha})`);
     ctx.strokeStyle = g;
